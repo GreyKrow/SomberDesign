@@ -1,5 +1,4 @@
 <script setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue'
 import inSiteHeader from './components/inSiteHeader.vue'
 import inHeroSection from './components/inHeroSection.vue'
 import inAboutSection from './components/inAboutSection.vue'
@@ -7,35 +6,6 @@ import inProjectsSection from './components/inProjectsSection.vue'
 import inContactSection from './components/inContactSection.vue'
 import inSiteFooter from './components/inSiteFooter.vue'
 import inSnowLayer from './components/inSnowLayer.vue'
-
-const activeSection = ref('hero')
-let observer
-
-onMounted(() => {
-  const sections = document.querySelectorAll('[data-section]')
-
-  observer = new IntersectionObserver(
-    entries => {
-      const visibleSections = entries
-        .filter(entry => entry.isIntersecting)
-        .sort((first, second) => second.intersectionRatio - first.intersectionRatio)
-
-      if (visibleSections.length > 0) {
-        activeSection.value = visibleSections[0].target.id
-      }
-    },
-    {
-      threshold: [0.35, 0.55, 0.75],
-      rootMargin: '-12% 0px -42% 0px',
-    },
-  )
-
-  sections.forEach(section => observer.observe(section))
-})
-
-onBeforeUnmount(() => {
-  observer?.disconnect()
-})
 </script>
 
 <template>
@@ -45,7 +15,7 @@ onBeforeUnmount(() => {
     <div class="app__vignette" aria-hidden="true"></div>
     <inSnowLayer />
 
-    <inSiteHeader :active-section="activeSection" />
+    <inSiteHeader />
 
     <main>
       <inHeroSection id="hero" class="section-anchor" data-section />

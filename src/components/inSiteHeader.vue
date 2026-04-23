@@ -1,12 +1,5 @@
 <script setup>
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
-
-const props = defineProps({
-  activeSection: {
-    type: String,
-    default: 'hero',
-  },
-})
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 const isMenuOpen = ref(false)
 
@@ -16,10 +9,6 @@ const navItems = [
   { id: 'projects', label: 'Work' },
   { id: 'contact', label: 'Contact' },
 ]
-
-const shellClasses = computed(() => ({
-  isCompact: props.activeSection !== 'hero',
-}))
 
 const closeMenu = () => {
   isMenuOpen.value = false
@@ -53,7 +42,7 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <header class="siteHeader" :class="shellClasses">
+  <header class="siteHeader">
     <div class="shell-grid siteHeader__inner line-frame">
       <a href="#hero" class="siteHeader__brand" aria-label="Somber.Design home" @click="closeMenu">
         <img class="siteHeader__logo" src="/assets/images/SomberDesignLogo.png" alt="Somber.Design logo" />
@@ -82,7 +71,6 @@ onBeforeUnmount(() => {
           :key="item.id"
           :href="`#${item.id}`"
           class="siteHeader__link"
-          :class="{ isActive: activeSection === item.id }"
           @click="closeMenu"
         >
           {{ item.label }}
@@ -104,7 +92,7 @@ onBeforeUnmount(() => {
   position: relative;
   align-items: center;
   min-height: var(--header-height);
-  overflow: hidden;
+  overflow: visible;
   background: rgba(7, 9, 13, 0.88);
   backdrop-filter: blur(8px);
 }
@@ -171,8 +159,7 @@ onBeforeUnmount(() => {
 }
 
 .siteHeader__link:hover,
-.siteHeader__link:focus-visible,
-.siteHeader__link.isActive {
+.siteHeader__link:focus-visible {
   color: var(--color-ink);
   background: rgba(243, 245, 248, 0.08);
   outline: none;
@@ -231,6 +218,7 @@ onBeforeUnmount(() => {
     left: 0;
     right: 0;
     top: calc(100% + 0.45rem);
+    z-index: 2;
     display: grid;
     border: 1px solid var(--color-line);
     background: rgba(7, 9, 13, 0.98);
