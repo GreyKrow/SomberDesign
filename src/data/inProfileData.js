@@ -1,48 +1,43 @@
 export const profileData = {
   alias: 'SomberDesign',
-  label: 'Personal design space / selected work / working archive',
-  headline: 'Personal tools, identity-led websites, and quieter digital work.',
+  label: 'Brutalist web studio',
+  headline: 'Clear websites for people and small teams.',
   intro:
-    'SomberDesign is where I keep the work that feels most like mine — smaller projects built with purpose, restraint, and a stronger connection between function, atmosphere, and identity.',
+    'I design and build fast, accessible websites with a strong visual voice and no unnecessary clutter. Every page has a job and every element earns its place.',
   summary:
-    'Part portfolio, part archive, and part working record for the things I am building carefully and keeping honest.',
-  location: 'Based online. Building slowly and intentionally.',
+    'SomberDesign is a portfolio and working studio focused on practical interfaces, readable content, and durable front-end systems.',
+  location: 'United States (remote)',
   availability:
-    'Open to selective collaborations, personal projects, and identity-focused web work.',
-  currentSignal: {
-    title: 'Current direction',
-    text:
-      'Refining SomberDesign into a cleaner personal space for focused work, stronger presentation, and projects that feel personal instead of generic.',
-  },
+    'Currently taking 1-2 focused projects each month for redesigns, landing pages, and portfolio sites.',
   ctas: {
     primary: {
-      label: 'View Projects',
+      label: 'See Projects',
       href: '#projects',
     },
     secondary: {
-      label: 'Contact',
+      label: 'Start a Project',
       href: '#contact',
     },
   },
   principles: [
-    'Build smaller, stronger things first.',
-    'Treat unfinished work as part of the record.',
-    'Make work that feels personal, clear, and worth returning to.',
+    'Design for readability first.',
+    'Ship fewer components with better structure.',
+    'Use contrast, spacing, and hierarchy to guide users.',
   ],
   contactLinks: [
     {
+      label: 'Email',
+      value: 'hello@somberdesign.dev',
+      href: 'mailto:hello@somberdesign.dev',
+    },
+    {
       label: 'GitHub',
-      value: 'Add your GitHub profile',
-      href: '',
+      value: 'github.com/somberdesign',
+      href: 'https://github.com/somberdesign',
     },
     {
       label: 'Discord',
-      value: 'Add your Discord handle',
-      href: '',
-    },
-    {
-      label: 'Email',
-      value: 'Add your contact email',
+      value: 'SomberDesign#0001',
       href: '',
     },
   ],

@@ -1,31 +1,18 @@
 :root {
-  --color-ink-950: #0e141c;
-  --color-ink-900: #121a23;
-  --color-ink-850: #18212b;
-  --color-ink-800: #1f2833;
-  --color-surface-700: rgba(37, 48, 63, 0.78);
-  --color-surface-650: rgba(45, 58, 75, 0.72);
-  --color-surface-600: rgba(55, 70, 90, 0.64);
-  --color-surface-500: rgba(77, 95, 120, 0.38);
-  --color-border-soft: rgba(214, 224, 236, 0.12);
-  --color-border-strong: rgba(214, 224, 236, 0.2);
-  --color-text-strong: #edf2f7;
-  --color-text-base: #d3dbe5;
-  --color-text-muted: #9fabb9;
-  --color-accent: #a3b8d1;
-  --color-accent-strong: #c0d3e8;
-  --color-shadow: rgba(5, 10, 16, 0.3);
+  --color-background: #f4f4f4;
+  --color-background-alt: #e9e9e9;
+  --color-surface: #ffffff;
+  --color-text-strong: #121212;
+  --color-text-base: #222222;
+  --color-text-muted: #4b4b4b;
+  --color-border: #121212;
+  --color-accent: #ffe44d;
 
-  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
-  --font-accent: 'Work Sans', system-ui, sans-serif;
 
-  --site-width: min(1180px, calc(100vw - 2rem));
-  --content-width: min(760px, calc(100vw - 2rem));
-  --header-height: 4.5rem;
-  --radius-large: 28px;
-  --radius-medium: 20px;
-  --radius-small: 14px;
-  --shadow-panel: 0 24px 60px var(--color-shadow);
-  --transition-standard: 220ms ease;
+  --site-width: min(1100px, calc(100vw - 2rem));
+  --content-width: min(800px, calc(100vw - 2rem));
+  --header-height: 4.4rem;
+  --transition-standard: 160ms ease;
 }
