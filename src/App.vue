@@ -17,15 +17,15 @@ onMounted(() => {
     entries => {
       const visibleSections = entries
         .filter(entry => entry.isIntersecting)
-        .sort((first, second) => second.intersectionRatio - first.intersectionRatio)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
 
       if (visibleSections.length > 0) {
         activeSection.value = visibleSections[0].target.id
       }
     },
     {
-      threshold: [0.25, 0.45, 0.6],
-      rootMargin: '-10% 0px -35% 0px',
+      threshold: [0.3, 0.55],
+      rootMargin: '-15% 0px -45% 0px',
     },
   )
 
@@ -33,20 +33,20 @@ onMounted(() => {
 })
 
 onBeforeUnmount(() => {
-  if (observer) {
-    observer.disconnect()
-  }
+  observer?.disconnect()
 })
 </script>
 
 <template>
+  <a class="skipLink" href="#main-content">Skip to main content</a>
+
   <div class="appShell">
     <div class="appBackdrop" aria-hidden="true"></div>
     <div class="appOverlay" aria-hidden="true"></div>
 
     <inSiteHeader :active-section="activeSection" />
 
-    <main class="appMain">
+    <main id="main-content" class="appMain">
       <inHeroSection id="hero" class="section-anchor" data-section />
       <inAboutSection id="about" class="section-anchor" data-section />
       <inProjectsSection id="projects" class="section-anchor" data-section />
@@ -58,11 +58,26 @@ onBeforeUnmount(() => {
 </template>
 
 <style scoped lang="scss">
+.skipLink {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  border: 2px solid var(--color-text-strong);
+  background: var(--color-background);
+  color: var(--color-text-strong);
+  transform: translateY(-180%);
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}
+
 .appShell {
+  min-height: 100vh;
   position: relative;
   isolation: isolate;
-  min-height: 100vh;
-  overflow: clip;
 }
 
 .appBackdrop,
@@ -76,20 +91,21 @@ onBeforeUnmount(() => {
   z-index: -3;
   background-image: url('/assets/images/graykrowForest.png');
   background-position: center bottom;
-  background-size: cover;
   background-repeat: no-repeat;
-  transform: scale(1.04);
+  background-size: cover;
+  transform: scale(1.03);
 }
 
 .appOverlay {
   z-index: -2;
   background:
-    linear-gradient(180deg, rgba(11, 16, 23, 0.48) 0%, rgba(11, 16, 23, 0.72) 34%, rgba(11, 16, 23, 0.88) 100%),
-    radial-gradient(circle at top center, rgba(182, 202, 229, 0.12), transparent 48%);
+    linear-gradient(180deg, rgba(8, 13, 20, 0.55), rgba(8, 13, 20, 0.9)),
+    radial-gradient(circle at top, rgba(175, 196, 220, 0.16), transparent 44%);
 }
 
 .appMain {
-  position: relative;
-  z-index: 1;
+  width: var(--site-width);
+  margin: 0 auto;
+  padding-bottom: 2rem;
 }
 </style>
