@@ -1,5 +1,5 @@
 <script setup>
-import { onBeforeUnmount, onMounted, ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
 
 const isMenuOpen = ref(false)
 
@@ -30,12 +30,17 @@ const handleKeydown = event => {
   }
 }
 
+watch(isMenuOpen, value => {
+  document.body.classList.toggle('nav-open', value)
+})
+
 onMounted(() => {
   window.addEventListener('resize', handleResize)
   window.addEventListener('keydown', handleKeydown)
 })
 
 onBeforeUnmount(() => {
+  document.body.classList.remove('nav-open')
   window.removeEventListener('resize', handleResize)
   window.removeEventListener('keydown', handleKeydown)
 })
@@ -77,6 +82,13 @@ onBeforeUnmount(() => {
         </a>
       </nav>
     </div>
+    <button
+      v-if="isMenuOpen"
+      class="siteHeader__scrim"
+      type="button"
+      aria-label="Close navigation menu"
+      @click="closeMenu"
+    ></button>
   </header>
 </template>
 
@@ -165,7 +177,8 @@ onBeforeUnmount(() => {
   outline: none;
 }
 
-.siteHeader__menuButton {
+.siteHeader__menuButton,
+.siteHeader__scrim {
   display: none;
 }
 
@@ -194,6 +207,7 @@ onBeforeUnmount(() => {
     border-left: 1px solid rgba(243, 245, 248, 0.12);
     background: transparent;
     cursor: pointer;
+    z-index: 45;
   }
 
   .siteHeader__menuButton span {
@@ -213,6 +227,17 @@ onBeforeUnmount(() => {
     transform: translateY(-3px) rotate(-35deg);
   }
 
+  .siteHeader__scrim {
+    position: fixed;
+    inset: 0;
+    display: block;
+    background: rgba(4, 6, 9, 0.78);
+    backdrop-filter: blur(3px);
+    border: 0;
+    z-index: 30;
+    cursor: pointer;
+  }
+
   .siteHeader__nav {
     position: fixed;
     left: 0;
@@ -224,7 +249,7 @@ onBeforeUnmount(() => {
     align-content: start;
     width: 100vw;
     border-top: 1px solid var(--color-line);
-    background: rgba(7, 9, 13, 0.98);
+    background: linear-gradient(180deg, rgba(7, 9, 13, 0.98), rgba(7, 9, 13, 0.94));
     opacity: 0;
     pointer-events: none;
     transform: translateY(-6px);
@@ -244,6 +269,7 @@ onBeforeUnmount(() => {
     border-left: 0;
     border-top: 1px solid rgba(243, 245, 248, 0.12);
     padding-inline: 1.1rem;
+    font-size: 0.72rem;
   }
 
   .siteHeader__link:first-child {

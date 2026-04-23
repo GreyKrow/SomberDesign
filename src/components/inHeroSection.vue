@@ -163,13 +163,32 @@ import { profileData } from '../data/inProfileData'
   }
 }
 
-@media (max-width: 640px) {
+
+@media (max-width: 900px) {
   .heroSection {
-    padding-top: 3rem;
+    padding-top: 2.4rem;
   }
 
   .heroSection__title {
-    font-size: clamp(2.2rem, 14vw, 4rem);
+    max-width: 10ch;
+    font-size: clamp(2rem, 10.5vw, 3.8rem);
+    line-height: 0.9;
+  }
+
+  .heroSection__intro {
+    max-width: 46ch;
+  }
+}
+
+@media (max-width: 640px) {
+  .heroSection {
+    padding-top: 2rem;
+  }
+
+  .heroSection__title {
+    max-width: 9ch;
+    font-size: clamp(1.85rem, 12.5vw, 3rem);
+    line-height: 0.92;
   }
 
   .heroSection__intro {
