@@ -1,48 +1,47 @@
 export const profileData = {
-  alias: 'SomberDesign',
-  label: 'Personal design space / selected work / working archive',
-  headline: 'Personal tools, identity-led websites, and quieter digital work.',
+  alias: 'Somber.Design',
+  label: 'Design engineer / identity systems / selective output',
+  headline: 'I design and engineer digital spaces with severe clarity.',
   intro:
-    'SomberDesign is where I keep the work that feels most like mine — smaller projects built with purpose, restraint, and a stronger connection between function, atmosphere, and identity.',
+    'Somber.Design is my personal operating surface: finished projects, active experiments, and in-progress systems shaped with intent instead of noise.',
   summary:
-    'Part portfolio, part archive, and part working record for the things I am building carefully and keeping honest.',
-  location: 'Based online. Building slowly and intentionally.',
-  availability:
-    'Open to selective collaborations, personal projects, and identity-focused web work.',
+    'I build with typography, structure, and restraint first. Every decision has to hold up under use, not just in a screenshot.',
+  location: 'United States · remote-first',
+  availability: 'Taking 1–2 focused collaborations per cycle.',
   currentSignal: {
-    title: 'Current direction',
+    title: 'Current signal',
     text:
-      'Refining SomberDesign into a cleaner personal space for focused work, stronger presentation, and projects that feel personal instead of generic.',
+      'Rebuilding this site into a tougher archive for product design, frontend systems, and ongoing experiments.',
   },
   ctas: {
     primary: {
-      label: 'View Projects',
+      label: 'View selected work',
       href: '#projects',
     },
     secondary: {
-      label: 'Contact',
+      label: 'Start a conversation',
       href: '#contact',
     },
   },
   principles: [
-    'Build smaller, stronger things first.',
-    'Treat unfinished work as part of the record.',
-    'Make work that feels personal, clear, and worth returning to.',
+    'Structure before decoration.',
+    'Finished and unfinished work can coexist.',
+    'Build for longevity, not algorithmic trend cycles.',
   ],
   contactLinks: [
     {
+      label: 'Email',
+      value: 'hello@somber.design',
+      href: 'mailto:hello@somber.design',
+    },
+    {
       label: 'GitHub',
-      value: 'Add your GitHub profile',
-      href: '',
+      value: 'github.com/somberdesign',
+      href: 'https://github.com/somberdesign',
     },
     {
       label: 'Discord',
-      value: 'Add your Discord handle',
-      href: '',
-    },
-    {
-      label: 'Email',
-      value: 'Add your contact email',
+      value: '@somberdesign',
       href: '',
     },
   ],
