@@ -214,13 +214,16 @@ onBeforeUnmount(() => {
   }
 
   .siteHeader__nav {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
-    top: calc(100% + 0.45rem);
-    z-index: 2;
+    top: calc(var(--header-height) + 0.45rem);
+    bottom: 0;
+    z-index: 35;
     display: grid;
-    border: 1px solid var(--color-line);
+    align-content: start;
+    width: 100vw;
+    border-top: 1px solid var(--color-line);
     background: rgba(7, 9, 13, 0.98);
     opacity: 0;
     pointer-events: none;
@@ -235,12 +238,12 @@ onBeforeUnmount(() => {
   }
 
   .siteHeader__link {
-    min-height: 50px;
+    min-height: 58px;
     min-width: 0;
     justify-content: flex-start;
     border-left: 0;
     border-top: 1px solid rgba(243, 245, 248, 0.12);
-    padding-inline: 0.95rem;
+    padding-inline: 1.1rem;
   }
 
   .siteHeader__link:first-child {
