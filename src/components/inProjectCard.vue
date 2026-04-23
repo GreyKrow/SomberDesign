@@ -9,7 +9,7 @@ const props = defineProps({
 
 <template>
   <article class="projectCard">
-    <p class="projectCard__status">{{ props.project.status }} / {{ props.project.category }}</p>
+    <p class="projectCard__status">{{ props.project.status }} · {{ props.project.category }}</p>
     <h3 class="projectCard__title">{{ props.project.title }}</h3>
     <p class="projectCard__summary">{{ props.project.summary }}</p>
 
@@ -22,7 +22,7 @@ const props = defineProps({
     </ul>
 
     <div class="projectCard__links">
-      <template v-if="props.project.links.length">
+      <template v-if="props.project.links.some(item => item.href)">
         <a
           v-for="link in props.project.links.filter(item => item.href)"
           :key="link.label"
@@ -33,7 +33,7 @@ const props = defineProps({
           {{ link.label }}
         </a>
       </template>
-      <span v-else>Private work</span>
+      <span v-else>{{ props.project.links[0]?.label || 'Private work' }}</span>
     </div>
   </article>
 </template>
@@ -41,6 +41,7 @@ const props = defineProps({
 <style scoped lang="scss">
 .projectCard {
   border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
   background: var(--color-surface-soft);
   padding: 1rem;
   display: grid;
@@ -49,14 +50,13 @@ const props = defineProps({
 
 .projectCard__status {
   font-size: 0.78rem;
-  font-weight: 800;
-  text-transform: uppercase;
+  font-weight: 700;
   color: var(--color-accent);
 }
 
 .projectCard__title {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   line-height: 1.1;
   color: var(--color-text-strong);
 }
@@ -77,12 +77,14 @@ const props = defineProps({
 
 .projectCard__stack li {
   border: 1px solid var(--color-border);
-  padding: 0.18rem 0.45rem;
+  border-radius: 999px;
+  padding: 0.18rem 0.5rem;
   font-size: 0.8rem;
 }
 
 .projectCard__links {
   color: var(--color-text-muted);
+  font-size: 0.9rem;
 }
 
 .projectCard__links a {
@@ -91,7 +93,7 @@ const props = defineProps({
   margin-top: 0.2rem;
   padding-bottom: 0.1rem;
   border-bottom: 1px solid var(--color-border);
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-text-strong);
 }
 </style>

@@ -52,10 +52,11 @@ const navItems = [
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 0.8rem;
   border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
   background: rgba(14, 21, 30, 0.86);
-  padding: 0.45rem 0.7rem;
+  padding: 0.5rem 0.8rem;
 }
 
 .siteHeader__brand {
@@ -63,27 +64,30 @@ const navItems = [
   align-items: center;
   gap: 0.6rem;
   font-family: var(--font-display);
-  font-weight: 800;
-  font-size: 1.15rem;
+  font-weight: 700;
+  font-size: 1.05rem;
   color: var(--color-text-strong);
 }
 
 .siteHeader__logo {
-  width: 2.6rem;
-  height: 2.6rem;
+  width: 2.45rem;
+  height: 2.45rem;
   object-fit: contain;
 }
 
 .siteHeader__nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  justify-content: flex-end;
+  gap: 0.35rem;
 }
 
 .siteHeader__link {
-  padding: 0.35rem 0.6rem;
+  padding: 0.3rem 0.55rem;
   border: 1px solid transparent;
-  font-weight: 700;
+  border-radius: var(--radius-small);
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--color-text-base);
 }
 
@@ -91,5 +95,18 @@ const navItems = [
   border-color: var(--color-border);
   background: var(--color-surface-soft);
   color: var(--color-text-strong);
+}
+
+@media (max-width: 720px) {
+  .siteHeader__inner {
+    min-height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .siteHeader__nav {
+    width: 100%;
+    justify-content: flex-start;
+  }
 }
 </style>

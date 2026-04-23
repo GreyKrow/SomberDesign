@@ -1,19 +1,21 @@
 :root {
-  --color-background: #101823;
+  --color-background: #0f1823;
   --color-background-alt: #152131;
-  --color-surface: rgba(24, 35, 51, 0.9);
-  --color-surface-soft: rgba(35, 49, 68, 0.82);
+  --color-surface: rgba(20, 30, 44, 0.86);
+  --color-surface-soft: rgba(35, 49, 68, 0.78);
   --color-text-strong: #e9f0f8;
   --color-text-base: #cfdae6;
   --color-text-muted: #9fb0c3;
-  --color-border: #8fa5bd;
-  --color-accent: #bed2e8;
+  --color-border: rgba(158, 180, 203, 0.36);
+  --color-accent: #bfd3e8;
 
   --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
 
-  --site-width: min(1100px, calc(100vw - 2rem));
-  --content-width: min(800px, calc(100vw - 2rem));
+  --site-width: min(1140px, calc(100vw - 2rem));
+  --content-width: min(780px, calc(100vw - 2rem));
   --header-height: 5rem;
-  --transition-standard: 160ms ease;
+  --radius-medium: 14px;
+  --radius-small: 10px;
+  --transition-standard: 180ms ease;
 }

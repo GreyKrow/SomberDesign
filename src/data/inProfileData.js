@@ -1,43 +1,47 @@
 export const profileData = {
   alias: 'SomberDesign',
-  label: 'Brutalist web studio',
-  headline: 'Clear websites for people and small teams.',
+  label: 'Personal design space',
+  headline: 'Personal tools and identity-led websites.',
   intro:
-    'I design and build fast, accessible websites with a strong visual voice and no unnecessary clutter. Every page has a job and every element earns its place.',
+    'SomberDesign is my home for focused digital work: practical builds with clear structure and a personal voice.',
   summary:
-    'SomberDesign is a portfolio and working studio focused on practical interfaces, readable content, and durable front-end systems.',
-  location: 'United States (remote)',
+    'A compact portfolio and archive for projects I am actively building and refining.',
+  location: 'Based online. Building intentionally.',
   availability:
-    'Currently taking 1-2 focused projects each month for redesigns, landing pages, and portfolio sites.',
+    'Open to selective collaborations, personal projects, and identity-focused web work.',
+  currentSignal: {
+    title: 'Current direction',
+    text: 'Refining this site into a clearer, faster, and more useful portfolio experience.',
+  },
   ctas: {
     primary: {
-      label: 'See Projects',
+      label: 'View Projects',
       href: '#projects',
     },
     secondary: {
-      label: 'Start a Project',
+      label: 'Contact',
       href: '#contact',
     },
   },
   principles: [
-    'Design for readability first.',
-    'Ship fewer components with better structure.',
-    'Use contrast, spacing, and hierarchy to guide users.',
+    'Build smaller, stronger things first.',
+    'Treat unfinished work as part of the record.',
+    'Make the work clear, useful, and memorable.',
   ],
   contactLinks: [
     {
-      label: 'Email',
-      value: 'hello@somberdesign.dev',
-      href: 'mailto:hello@somberdesign.dev',
-    },
-    {
       label: 'GitHub',
-      value: 'github.com/somberdesign',
-      href: 'https://github.com/somberdesign',
+      value: 'Add your GitHub profile',
+      href: '',
     },
     {
       label: 'Discord',
-      value: 'SomberDesign#0001',
+      value: 'Add your Discord handle',
+      href: '',
+    },
+    {
+      label: 'Email',
+      value: 'Add your contact email',
       href: '',
     },
   ],
