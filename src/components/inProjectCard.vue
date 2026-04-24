@@ -8,27 +8,17 @@ const props = defineProps({
 </script>
 
 <template>
-<<<<<<< HEAD
   <article class="projectCard">
     <div class="projectCard__top">
-=======
-  <article class="projectCard line-frame">
-    <div class="projectCard__meta">
->>>>>>> f42ff6b (Changes)
       <p class="projectCard__status">{{ props.project.status }}</p>
       <p class="projectCard__category">{{ props.project.category }}</p>
     </div>
 
-<<<<<<< HEAD
     <div class="projectCard__main">
-=======
-    <div class="projectCard__core">
->>>>>>> f42ff6b (Changes)
       <h3 class="projectCard__title">{{ props.project.title }}</h3>
       <p class="projectCard__summary">{{ props.project.summary }}</p>
     </div>
 
-<<<<<<< HEAD
     <div class="projectCard__section">
       <p class="projectCard__label">Highlights</p>
       <ul class="projectCard__highlights">
@@ -51,19 +41,10 @@ const props = defineProps({
           {{ item }}
         </li>
       </ul>
-=======
-    <ul class="projectCard__highlights">
-      <li v-for="highlight in props.project.highlights" :key="highlight">{{ highlight }}</li>
-    </ul>
-
-    <div class="projectCard__stack">
-      <span v-for="item in props.project.stack" :key="item">{{ item }}</span>
->>>>>>> f42ff6b (Changes)
     </div>
 
     <div class="projectCard__links">
       <template v-for="link in props.project.links" :key="link.label">
-<<<<<<< HEAD
         <a
           v-if="link.href"
           :href="link.href"
@@ -80,12 +61,6 @@ const props = defineProps({
         >
           {{ link.label }}
         </span>
-=======
-        <a v-if="link.href" :href="link.href" target="_blank" rel="noreferrer" class="projectCard__link">
-          {{ link.label }}
-        </a>
-        <span v-else class="projectCard__link projectCard__link--muted">{{ link.label }}</span>
->>>>>>> f42ff6b (Changes)
       </template>
     </div>
   </article>
@@ -94,7 +69,6 @@ const props = defineProps({
 <style scoped lang="scss">
 .projectCard {
   display: grid;
-<<<<<<< HEAD
   grid-template-rows: auto auto auto auto 1fr;
   gap: 1rem;
   min-height: 100%;
@@ -114,18 +88,10 @@ const props = defineProps({
     border-color var(--transition-standard),
     background var(--transition-standard),
     box-shadow var(--transition-standard);
-=======
-  grid-template-columns: minmax(140px, 210px) minmax(0, 1.4fr) minmax(0, 1fr) minmax(150px, 220px);
-  gap: 0.75rem 1rem;
-  align-items: start;
-  padding: 1rem;
-  transition: border-color var(--duration-fast) var(--ease-out), transform var(--duration-fast) var(--ease-out);
->>>>>>> f42ff6b (Changes)
 }
 
 .projectCard:hover,
 .projectCard:focus-within {
-<<<<<<< HEAD
   transform: translateY(-3px);
   border-color: rgba(214, 224, 236, 0.1);
   box-shadow:
@@ -188,45 +154,6 @@ const props = defineProps({
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-=======
-  transform: translate3d(0, -2px, 0);
-  border-color: var(--color-line-strong);
-}
-
-.projectCard__meta {
-  display: grid;
-  gap: 0.45rem;
-}
-
-.projectCard__status,
-.projectCard__category {
-  font-family: var(--font-mono);
-  font-size: 0.65rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.projectCard__status {
-  color: var(--color-ink);
-}
-
-.projectCard__category {
-  color: var(--color-ink-muted);
-}
-
-.projectCard__title {
-  font-family: var(--font-display);
-  font-size: clamp(1.25rem, 1.8vw, 2rem);
-  line-height: 0.94;
-  letter-spacing: -0.03em;
-}
-
-.projectCard__summary {
-  margin-top: 0.5rem;
-  color: var(--color-ink-dim);
-  font-size: 0.91rem;
-  line-height: 1.62;
->>>>>>> f42ff6b (Changes)
 }
 
 .projectCard__highlights {
@@ -236,42 +163,26 @@ const props = defineProps({
 
 .projectCard__highlights li {
   position: relative;
-<<<<<<< HEAD
   padding-left: 0.9rem;
   color: var(--color-text-muted);
   font-size: 0.9rem;
   line-height: 1.68;
-=======
-  padding-left: 0.75rem;
-  color: var(--color-ink-dim);
-  font-size: 0.83rem;
-  line-height: 1.52;
->>>>>>> f42ff6b (Changes)
 }
 
 .projectCard__highlights li::before {
   content: '';
   position: absolute;
-<<<<<<< HEAD
   top: 0.7rem;
   left: 0;
   width: 0.32rem;
   height: 0.32rem;
   border-radius: 999px;
   background: rgba(192, 211, 232, 0.7);
-=======
-  left: 0;
-  top: 0.5rem;
-  width: 0.33rem;
-  height: 1px;
-  background: var(--color-line-strong);
->>>>>>> f42ff6b (Changes)
 }
 
 .projectCard__stack {
   display: flex;
   flex-wrap: wrap;
-<<<<<<< HEAD
   gap: 0.42rem;
 }
 
@@ -373,58 +284,3 @@ const props = defineProps({
   }
 }
 </style>
-=======
-  gap: 0.36rem;
-}
-
-.projectCard__stack span {
-  display: inline-flex;
-  align-items: center;
-  min-height: 1.7rem;
-  padding: 0.28rem 0.5rem;
-  border: 1px solid rgba(243, 245, 248, 0.15);
-  color: var(--color-ink-dim);
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.projectCard__links {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-  padding-top: 0.6rem;
-  border-top: 1px solid rgba(243, 245, 248, 0.12);
-}
-
-.projectCard__link {
-  color: var(--color-ink);
-  font-family: var(--font-mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.projectCard__link--muted {
-  color: var(--color-ink-muted);
-}
-
-@media (max-width: 1200px) {
-  .projectCard {
-    grid-template-columns: minmax(120px, 180px) minmax(0, 1fr);
-  }
-
-  .projectCard__stack {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (max-width: 780px) {
-  .projectCard {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
->>>>>>> f42ff6b (Changes)

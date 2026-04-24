@@ -1,6 +1,5 @@
 export const projectsData = [
   {
-<<<<<<< HEAD
     title: 'GrayVault',
     status: 'In Progress',
     category: 'Local-first app',
@@ -10,50 +9,15 @@ export const projectsData = [
     highlights: [
       'Local-first direction',
       'Minimal interface language',
-=======
-    title: 'CinderGlyph',
-    status: 'Private System',
-    category: 'Creator support framework',
-    summary:
-      'Small support collective and identity system for trusted creators, built around websites, infrastructure, and practical creative help instead of public recruitment.',
-    stack: ['Brand Strategy', 'Frontend', 'Narrative Systems'],
-    highlights: [
-      'Creator sites and identity support',
-      'Small and trust-based by design',
-      'Practical infrastructure direction',
-    ],
-    links: [
-      {
-        label: 'Project notes pending',
-        href: '',
-      },
-    ],
-  },
-  {
-    title: 'GrayVault',
-    status: 'Active Prototype',
-    category: 'Local-first utility',
-    summary:
-      'Password manager concept focused on private workflows, low-noise interaction, and desktop utility without cloud dependency.',
-    stack: ['Vue 3', 'Vite', 'Electron', 'SCSS'],
-    highlights: [
-      'Quiet, task-first interface',
-      'Offline-first vault direction',
->>>>>>> f42ff6b (Changes)
       'Built around practical daily use',
     ],
     links: [
       {
-<<<<<<< HEAD
         label: 'Case file pending',
-=======
-        label: 'Case study in progress',
->>>>>>> f42ff6b (Changes)
         href: '',
       },
     ],
   },
-<<<<<<< HEAD
   {
     title: 'MarkFlow',
     status: 'Experimental',
@@ -93,6 +57,3 @@ export const projectsData = [
     ],
   },
 ]
-=======
-]
->>>>>>> f42ff6b (Changes)
