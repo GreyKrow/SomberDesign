@@ -1,17 +1,17 @@
 export const profileData = {
   alias: 'Somber.Design',
-  label: 'Design engineer / identity systems / selective output',
-  headline: 'I design and engineer digital spaces with severe clarity.',
+  label: 'Frontend design / identity systems / quiet utility',
+  headline: 'Focused digital work, built with restraint.',
   intro:
-    'Somber.Design is my personal operating surface: finished projects, active experiments, and in-progress systems shaped with intent instead of noise.',
+    'Somber.Design is a personal archive for finished sites, active tools, and experiments shaped around clarity, atmosphere, and useful structure.',
   summary:
-    'I build with typography, structure, and restraint first. Every decision has to hold up under use, not just in a screenshot.',
+    'I build simple, deliberate interfaces: clean typography, practical systems, and enough mood to feel personal without becoming noise.',
   location: 'United States · remote-first',
-  availability: 'Taking 1–2 focused collaborations per cycle.',
+  availability: 'Open to focused frontend work, identity pages, and small utility builds.',
   currentSignal: {
     title: 'Current signal',
     text:
-      'Rebuilding this site into a tougher archive for product design, frontend systems, and ongoing experiments.',
+      'Refining this space into a cleaner index for websites, tools, identity systems, and experiments that are still becoming something.',
   },
   ctas: {
     primary: {
@@ -24,9 +24,9 @@ export const profileData = {
     },
   },
   principles: [
-    'Structure before decoration.',
-    'Finished and unfinished work can coexist.',
-    'Build for longevity, not algorithmic trend cycles.',
+    'Small finished systems beat oversized ideas.',
+    'Visual atmosphere should support the work, not bury it.',
+    'Process, experiments, and unfinished pieces can still be worth showing.',
   ],
   contactLinks: [
     {
@@ -38,11 +38,6 @@ export const profileData = {
       label: 'GitHub',
       value: 'github.com/somberdesign',
       href: 'https://github.com/somberdesign',
-    },
-    {
-      label: 'Discord',
-      value: '@somberdesign',
-      href: '',
     },
   ],
 }
