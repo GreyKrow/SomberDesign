@@ -6,7 +6,7 @@ const currentYear = new Date().getFullYear()
   <footer class="siteFooter">
     <div class="shell-grid siteFooter__inner">
       <p class="siteFooter__brand">Somber.Design</p>
-      <p class="siteFooter__note">Personal archive for design systems, frontend engineering, and evolving identity work.</p>
+      <p class="siteFooter__note">Quiet archive for websites, frontend systems, personal tools, and identity work.</p>
       <p class="siteFooter__copyright">© {{ currentYear }} · Crafted by Jacob</p>
     </div>
   </footer>
