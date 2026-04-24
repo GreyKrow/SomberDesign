@@ -1,5 +1,5 @@
 <script setup>
-import { onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 const isMenuOpen = ref(false)
 
@@ -30,17 +30,12 @@ const handleKeydown = event => {
   }
 }
 
-watch(isMenuOpen, value => {
-  document.body.classList.toggle('nav-open', value)
-})
-
 onMounted(() => {
   window.addEventListener('resize', handleResize)
   window.addEventListener('keydown', handleKeydown)
 })
 
 onBeforeUnmount(() => {
-  document.body.classList.remove('nav-open')
   window.removeEventListener('resize', handleResize)
   window.removeEventListener('keydown', handleKeydown)
 })
@@ -82,6 +77,7 @@ onBeforeUnmount(() => {
         </a>
       </nav>
     </div>
+
     <button
       v-if="isMenuOpen"
       class="siteHeader__scrim"
@@ -96,12 +92,13 @@ onBeforeUnmount(() => {
 .siteHeader {
   position: sticky;
   top: 0;
-  z-index: 40;
+  z-index: 80;
   padding-top: 0.7rem;
 }
 
 .siteHeader__inner {
   position: relative;
+  z-index: 2;
   align-items: center;
   min-height: var(--header-height);
   overflow: visible;
@@ -197,79 +194,109 @@ onBeforeUnmount(() => {
   }
 
   .siteHeader__menuButton {
+    position: relative;
+    z-index: 7;
     grid-column: 10 / -1;
     justify-self: end;
-    display: grid;
-    gap: 0.35rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 50px;
     height: 50px;
     border: 0;
     border-left: 1px solid rgba(243, 245, 248, 0.12);
     background: transparent;
     cursor: pointer;
-    z-index: 45;
   }
 
   .siteHeader__menuButton span {
+    position: absolute;
     width: 18px;
     height: 1px;
-    margin: auto;
     background: var(--color-ink);
     transform-origin: center;
     transition: transform var(--duration-fast) var(--ease-out), opacity var(--duration-fast) var(--ease-out);
   }
 
+  .siteHeader__menuButton span:first-child {
+    transform: translateY(-4px);
+  }
+
+  .siteHeader__menuButton span:last-child {
+    transform: translateY(4px);
+  }
+
   .siteHeader__menuButton.isOpen span:first-child {
-    transform: translateY(3px) rotate(35deg);
+    transform: rotate(35deg);
   }
 
   .siteHeader__menuButton.isOpen span:last-child {
-    transform: translateY(-3px) rotate(-35deg);
+    transform: rotate(-35deg);
   }
 
   .siteHeader__scrim {
     position: fixed;
     inset: 0;
+    z-index: 1;
     display: block;
-    background: rgba(4, 6, 9, 0.78);
-    backdrop-filter: blur(3px);
     border: 0;
-    z-index: 30;
+    background: rgba(4, 6, 9, 0.16);
     cursor: pointer;
   }
 
   .siteHeader__nav {
-    position: fixed;
-    left: 0;
+    position: absolute;
+    top: calc(100% + 0.45rem);
     right: 0;
-    top: calc(var(--header-height) + 0.45rem);
-    bottom: 0;
-    z-index: 35;
+    z-index: 6;
     display: grid;
     align-content: start;
-    width: 100vw;
-    border-top: 1px solid var(--color-line);
-    background: linear-gradient(180deg, rgba(7, 9, 13, 0.98), rgba(7, 9, 13, 0.94));
+    width: min(22rem, calc(100vw - 1.6rem));
+    height: auto;
+    max-height: calc(100vh - var(--header-height) - 1.5rem);
+    overflow-y: auto;
+    border: 1px solid var(--color-line);
+    background:
+      linear-gradient(180deg, rgba(13, 17, 23, 0.98), rgba(7, 9, 13, 0.95)),
+      rgba(7, 9, 13, 0.96);
+    box-shadow: 0 1.2rem 3rem rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(14px);
     opacity: 0;
     pointer-events: none;
-    transform: translateY(-6px);
-    transition: opacity var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out);
+    transform: translate3d(0, -0.4rem, 0) scale(0.985);
+    transform-origin: top right;
+    visibility: hidden;
+    transition:
+      opacity var(--duration-base) var(--ease-out),
+      transform var(--duration-base) var(--ease-out),
+      visibility 0s linear var(--duration-base);
   }
 
   .siteHeader__nav.isOpen {
     opacity: 1;
     pointer-events: auto;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0) scale(1);
+    visibility: visible;
+    transition-delay: 0s;
   }
 
   .siteHeader__link {
+    justify-content: space-between;
+    width: 100%;
     min-height: 58px;
     min-width: 0;
-    justify-content: flex-start;
     border-left: 0;
     border-top: 1px solid rgba(243, 245, 248, 0.12);
-    padding-inline: 1.1rem;
+    padding-inline: 1rem;
     font-size: 0.72rem;
+  }
+
+  .siteHeader__link::after {
+    content: '↘';
+    color: var(--color-ink-muted);
+    font-size: 0.72rem;
+    line-height: 1;
+    transform: translateY(-1px);
   }
 
   .siteHeader__link:first-child {
@@ -298,6 +325,13 @@ onBeforeUnmount(() => {
 
   .siteHeader__menuButton {
     grid-column: 9 / -1;
+  }
+
+  .siteHeader__nav {
+    left: 0;
+    right: 0;
+    width: auto;
+    transform-origin: top center;
   }
 }
 </style>
