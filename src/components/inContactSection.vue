@@ -7,7 +7,7 @@ import { profileData } from '../data/inProfileData'
     <div class="shell-grid contactSection__inner">
       <header class="contactSection__intro">
         <p class="kicker">Contact</p>
-        <h2 class="section-title">If it is focused, difficult, and worth crafting — I am interested.</h2>
+        <h2 class="section-title">For focused work, small builds, or useful cleanup, email is the cleanest path.</h2>
       </header>
 
       <div class="contactSection__panel line-frame">
