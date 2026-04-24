@@ -1,34 +1,34 @@
 export const projectsData = [
   {
     title: 'CinderGlyph',
-    status: 'Living System',
-    category: 'Identity framework',
+    status: 'Private System',
+    category: 'Creator support framework',
     summary:
-      'Private identity and collaboration framework balancing creative direction, system language, and communication architecture.',
+      'Small support collective and identity system for trusted creators, built around websites, infrastructure, and practical creative help instead of public recruitment.',
     stack: ['Brand Strategy', 'Frontend', 'Narrative Systems'],
     highlights: [
-      'Cohesive multi-project language',
-      'Selective and private by default',
-      'Evolving governance structure',
+      'Creator sites and identity support',
+      'Small and trust-based by design',
+      'Practical infrastructure direction',
     ],
     links: [
       {
-        label: 'Private archive',
+        label: 'Project notes pending',
         href: '',
       },
     ],
   },
   {
     title: 'GrayVault',
-    status: 'Active Build',
-    category: 'Local-first security utility',
+    status: 'Active Prototype',
+    category: 'Local-first utility',
     summary:
-      'Password and secrets manager designed for private workflows, offline durability, and calm interaction density.',
+      'Password manager concept focused on private workflows, low-noise interaction, and desktop utility without cloud dependency.',
     stack: ['Vue 3', 'Vite', 'Electron', 'SCSS'],
     highlights: [
-      'Hard-edged command surface',
-      'Encrypted local storage direction',
-      'Designed for repeat daily use',
+      'Quiet, task-first interface',
+      'Offline-first vault direction',
+      'Built around practical daily use',
     ],
     links: [
       {
