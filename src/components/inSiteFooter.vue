@@ -4,7 +4,6 @@ const currentYear = new Date().getFullYear()
 
 <template>
   <footer class="siteFooter">
-<<<<<<< HEAD
     <div class="siteFooter__inner">
       <div class="siteFooter__main">
         <span class="siteFooter__eyebrow">Closing signal</span>
@@ -37,19 +36,12 @@ const currentYear = new Date().getFullYear()
 
         <p class="siteFooter__copyright">© {{ currentYear }} SomberDesign</p>
       </div>
-=======
-    <div class="shell-grid siteFooter__inner">
-      <p class="siteFooter__brand">Somber.Design</p>
-      <p class="siteFooter__note">Quiet archive for websites, frontend systems, personal tools, and identity work.</p>
-      <p class="siteFooter__copyright">© {{ currentYear }} · Crafted by Jacob</p>
->>>>>>> f42ff6b (Changes)
     </div>
   </footer>
 </template>
 
 <style scoped lang="scss">
 .siteFooter {
-<<<<<<< HEAD
   position: relative;
   padding: 5rem 0 2rem;
 }
@@ -249,51 +241,6 @@ const currentYear = new Date().getFullYear()
   .siteFooter__note {
     font-size: 0.92rem;
     line-height: 1.7;
-=======
-  padding: 0.5rem 0 2rem;
-}
-
-.siteFooter__inner {
-  align-items: center;
-  padding-top: 0.85rem;
-  border-top: 1px solid rgba(243, 245, 248, 0.16);
-}
-
-.siteFooter__brand {
-  grid-column: 1 / span 3;
-  font-family: var(--font-display);
-  font-size: 0.95rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.siteFooter__note {
-  grid-column: 4 / span 6;
-  color: var(--color-ink-muted);
-  font-size: 0.8rem;
-}
-
-.siteFooter__copyright {
-  grid-column: 10 / -1;
-  justify-self: end;
-  color: var(--color-ink-muted);
-  font-family: var(--font-mono);
-  font-size: 0.64rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-@media (max-width: 900px) {
-  .siteFooter__brand,
-  .siteFooter__note,
-  .siteFooter__copyright {
-    grid-column: 1 / -1;
-    justify-self: start;
-  }
-
-  .siteFooter__inner {
-    gap: 0.4rem;
->>>>>>> f42ff6b (Changes)
   }
 }
 </style>

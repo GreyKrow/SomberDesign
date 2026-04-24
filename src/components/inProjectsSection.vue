@@ -4,7 +4,6 @@ import inProjectCard from './inProjectCard.vue'
 </script>
 
 <template>
-<<<<<<< HEAD
   <section class="projectsSection" id="projects">
     <div class="projectsSection__inner">
       <div class="projectsSection__copy">
@@ -25,21 +24,6 @@ import inProjectCard from './inProjectCard.vue'
           :key="project.title"
           :project="project"
         />
-=======
-  <section class="projectsSection">
-    <div class="shell-grid projectsSection__inner">
-      <header class="projectsSection__intro">
-        <p class="kicker">Selected Work</p>
-        <h2 class="section-title">A small archive of real builds, active experiments, and systems in motion.</h2>
-        <p class="section-body">
-          The work here is intentionally limited. Finished projects, rough prototypes, and evolving tools all belong
-          when they show direction, taste, or useful structure.
-        </p>
-      </header>
-
-      <div class="projectsSection__rail">
-        <inProjectCard v-for="project in projectsData" :key="project.title" :project="project" />
->>>>>>> f42ff6b (Changes)
       </div>
     </div>
   </section>
@@ -47,7 +31,6 @@ import inProjectCard from './inProjectCard.vue'
 
 <style scoped lang="scss">
 .projectsSection {
-<<<<<<< HEAD
   padding: 2rem 0 0;
 }
 
@@ -117,26 +100,6 @@ import inProjectCard from './inProjectCard.vue'
   .projectsSection__text {
     font-size: 0.94rem;
     line-height: 1.75;
-=======
-  padding: var(--section-pad-y) 0;
-}
-
-.projectsSection__intro {
-  grid-column: 1 / span 8;
-  display: grid;
-  gap: 1rem;
-}
-
-.projectsSection__rail {
-  grid-column: 1 / -1;
-  display: grid;
-  gap: 0.8rem;
-}
-
-@media (max-width: 900px) {
-  .projectsSection__intro {
-    grid-column: 1 / -1;
->>>>>>> f42ff6b (Changes)
   }
 }
 </style>
