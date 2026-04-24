@@ -36,8 +36,8 @@ export const profileData = {
     },
     {
       label: 'GitHub',
-      value: 'github.com/somberdesign',
-      href: 'https://github.com/somberdesign',
+      value: 'github.com/GreyKrow',
+      href: 'https://github.com/GreyKrow',
     },
   ],
 }
