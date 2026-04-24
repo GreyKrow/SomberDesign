@@ -41,7 +41,7 @@ import { profileData } from '../data/inProfileData'
 
 <style scoped lang="scss">
 .heroSection {
-  padding: clamp(3.2rem, 8vw, 6rem) 0 var(--section-pad-y-tight);
+  padding: clamp(3rem, 7vw, 5.4rem) 0 var(--section-pad-y-tight);
 }
 
 .heroSection__inner {
@@ -53,19 +53,18 @@ import { profileData } from '../data/inProfileData'
 }
 
 .heroSection__title {
-  margin-top: 1rem;
-  max-width: 12ch;
+  margin-top: 0.95rem;
+  max-width: 15ch;
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 8.2vw, 7.4rem);
+  font-size: clamp(2.35rem, 5.7vw, 5.05rem);
   font-weight: 500;
-  letter-spacing: -0.04em;
-  line-height: 0.88;
-  text-transform: uppercase;
+  letter-spacing: -0.035em;
+  line-height: 0.96;
   text-wrap: balance;
 }
 
 .heroSection__intro {
-  margin-top: 1.4rem;
+  margin-top: 1.25rem;
   max-width: 56ch;
   color: var(--color-ink-dim);
   font-size: clamp(0.97rem, 1.2vw, 1.15rem);
@@ -163,16 +162,16 @@ import { profileData } from '../data/inProfileData'
   }
 }
 
-
 @media (max-width: 900px) {
   .heroSection {
-    padding-top: 2.4rem;
+    padding-top: 2.35rem;
   }
 
   .heroSection__title {
-    max-width: 10ch;
-    font-size: clamp(2rem, 10.5vw, 3.8rem);
-    line-height: 0.9;
+    max-width: 15ch;
+    font-size: clamp(2.05rem, 8.5vw, 3.6rem);
+    letter-spacing: -0.03em;
+    line-height: 0.98;
   }
 
   .heroSection__intro {
@@ -182,16 +181,17 @@ import { profileData } from '../data/inProfileData'
 
 @media (max-width: 640px) {
   .heroSection {
-    padding-top: 2rem;
+    padding-top: 1.85rem;
   }
 
   .heroSection__title {
-    max-width: 9ch;
-    font-size: clamp(1.85rem, 12.5vw, 3rem);
-    line-height: 0.92;
+    max-width: 14ch;
+    font-size: clamp(1.8rem, 9.4vw, 2.75rem);
+    line-height: 1;
   }
 
   .heroSection__intro {
+    margin-top: 1.1rem;
     line-height: 1.66;
   }
 
