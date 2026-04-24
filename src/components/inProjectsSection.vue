@@ -8,10 +8,10 @@ import inProjectCard from './inProjectCard.vue'
     <div class="shell-grid projectsSection__inner">
       <header class="projectsSection__intro">
         <p class="kicker">Selected Work</p>
-        <h2 class="section-title">A curated mix of deployed builds and active systems.</h2>
+        <h2 class="section-title">A small archive of real builds, active experiments, and systems in motion.</h2>
         <p class="section-body">
-          This is not a gallery dump. Each project here is either in live use, in disciplined iteration,
-          or architecturally important to the Somber.Design ecosystem.
+          The work here is intentionally limited. Finished projects, rough prototypes, and evolving tools all belong
+          when they show direction, taste, or useful structure.
         </p>
       </header>
 
