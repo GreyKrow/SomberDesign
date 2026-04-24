@@ -4,15 +4,15 @@ import { profileData } from '../data/inProfileData'
 const aboutNotes = [
   {
     title: 'Discipline',
-    detail: 'Type, spacing, and rhythm drive the structure before color or ornament.',
+    detail: 'Start with type, spacing, and layout. Add atmosphere only when it earns the space.',
   },
   {
     title: 'Output',
-    detail: 'Product surfaces, branded websites, and experiments that stay usable under pressure.',
+    detail: 'Personal sites, creator pages, small tools, and frontend systems that can actually ship.',
   },
   {
     title: 'Method',
-    detail: 'Ship the smallest strong version first, then tighten motion, pacing, and edge cases.',
+    detail: 'Build the smallest strong version, then refine the edges: motion, copy, responsiveness, and polish.',
   },
 ]
 </script>
@@ -22,7 +22,7 @@ const aboutNotes = [
     <div class="shell-grid aboutSection__inner">
       <header class="aboutSection__intro">
         <p class="kicker">Approach</p>
-        <h2 class="section-title">Built for signal, not spectacle.</h2>
+        <h2 class="section-title">Clean structure. Quiet atmosphere. Useful output.</h2>
         <p class="section-body">{{ profileData.summary }}</p>
       </header>
 
